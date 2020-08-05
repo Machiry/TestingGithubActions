@@ -75,6 +75,7 @@ jobs:
         cd vsftpd-3.0.3
         bear make
         ls compile_commands.json
+        pwd
         
     - name: Testing vsftpd
       run: |
