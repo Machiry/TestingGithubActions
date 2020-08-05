@@ -25,6 +25,7 @@ jobs:
       with:
         repository: plum-umd/checkedc-clang
         ref: BigRefactor
+        path: depsfolder/checkedc-clang
       
     # Install all the required dependencies  
     - name: Install dependencies
@@ -52,14 +53,18 @@ jobs:
       uses: actions/checkout@v2
       with:
         repository: microsoft/checkedc
-        path: llvm/projects/checkedc-wrapper/checkedc
+        path: ${{github.workspace}}/depsfolder/checkedc-clang/llvm/projects/checkedc-wrapper/checkedc
       
+    - name: Check Checked C headers
+      run: |
+        ls ${{github.workspace}}/depsfolder/checkedc-clang/llvm/projects/checkedc-wrapper/checkedc
+        
     # Build cconv-standadlone
     - name: Build cconv-standalone
       uses: lukka/run-cmake@v2
       with:
         cmakeListsOrSettingsJson: CMakeListsTxtAdvanced
-        cmakeListsTxtPath: '${{github.workspace}}/llvm/CMakeLists.txt'
+        cmakeListsTxtPath: '${{github.workspace}}/depsfolder/checkedc-clang/llvm/CMakeLists.txt'
         buildDirectory: '${{runner.workspace}}/${{env.builddir}}'
         buildWithCMakeArgs: '-G Ninja -DLLVM_TARGETS_TO_BUILD=X86 -DLLVM_ENABLE_RTTI=ON -DCMAKE_BUILD_TYPE=Debug -DLLVM_ENABLE_PROJECTS="all" -- cconv-standalone'
     
@@ -74,5 +79,5 @@ jobs:
         
     - name: Testing vsftpd
       run: |
-        cd ${{github.workspace}}/clang/tools/cconv-standalone/utils/cc_conv
-        python convert_project.py --includeDir ${{github.workspace}}/llvm/projects/checkedc-wrapper/checkedc/include -p ${{runner.workspace}}/${{env.builddir}}/bin/cconv-standalone -pr ${{runner.workspace}}/${{env.vsftpddir}}/vsftpd-3.0.3
+        cd ${{github.workspace}}/depsfolder/checkedc-clang/clang/tools/cconv-standalone/utils/cc_conv
+        python convert_project.py --includeDir ${{github.workspace}}/depsfolder/checkedc-clang/llvm/projects/checkedc-wrapper/checkedc/include -p ${{runner.workspace}}/${{env.builddir}}/bin/cconv-standalone -pr ${{runner.workspace}}/${{env.vsftpddir}}/vsftpd-3.0.3
