@@ -61,7 +61,7 @@ jobs:
         cmakeListsOrSettingsJson: CMakeListsTxtAdvanced
         cmakeListsTxtPath: '${{github.workspace}}/llvm/CMakeLists.txt'
         buildDirectory: '${{runner.workspace}}/${{env.builddir}}'
-        buildWithCMakeArgs: '-G Ninja -DLLVM_TARGETS_TO_BUILD=X86 -DLLVM_ENABLE_RTTI=ON -DCMAKE_BUILD_TYPE=Debug -DLLVM_ENABLE_PROJECTS="clang;clang-tools-extra" -- cconv-standalone'
+        buildWithCMakeArgs: '-G Ninja -DLLVM_TARGETS_TO_BUILD=X86 -DLLVM_ENABLE_RTTI=ON -DCMAKE_BUILD_TYPE=Debug -DLLVM_ENABLE_PROJECTS="clang" -- cconv-standalone'
     
     - name: Build vsftpd
       run: |
