@@ -31,7 +31,7 @@ jobs:
     - name: Install dependencies
       run : |
         sudo apt-get update
-        sudo apt-get install libboost-all-dev git python cmake build-essential wget tar
+        sudo apt-get install libboost-all-dev git python cmake build-essential wget tar ninja-build
         
     # clone and install bear
     # Needed for generating compile_commands.json    
@@ -61,13 +61,11 @@ jobs:
         
     # Build cconv-standadlone
     - name: Build cconv-standalone
-      uses: lukka/run-cmake@v2
-      with:
-        cmakeListsOrSettingsJson: CMakeListsTxtAdvanced
-        cmakeListsTxtPath: '${{github.workspace}}/depsfolder/checkedc-clang/llvm/CMakeLists.txt'
-        buildDirectory: '${{runner.workspace}}/${{env.builddir}}'
-        buildWithCMakeArgs: '-G Ninja -DLLVM_TARGETS_TO_BUILD=X86 -DLLVM_ENABLE_RTTI=ON -DCMAKE_BUILD_TYPE=Debug -DLLVM_ENABLE_PROJECTS="all" -- cconv-standalone'
-    
+      run: |
+        mkdir -p ${{runner.workspace}}/${{env.builddir}}
+        cmake -G Ninja -DLLVM_TARGETS_TO_BUILD=X86 -DLLVM_ENABLE_RTTI=ON -DCMAKE_BUILD_TYPE=Debug -DLLVM_ENABLE_PROJECTS="clang;clang-tools-extra" ${{github.workspace}}/depsfolder/checkedc-clang/llvm
+        ninja cconv-standalone
+
     - name: Build vsftpd
       run: |
         mkdir ${{runner.workspace}}/${{env.vsftpddir}}
