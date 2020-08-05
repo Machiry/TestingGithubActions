@@ -19,21 +19,55 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    - name: Install dependencies (Boost)
-      run : |
-        sudo apt update
-        sudo apt-get install libboost-all-dev 
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@v2
+    - name: Clone the Repository
+      uses: actions/checkout@v2
+      
+    # Install all the required dependencies  
+    - name: Install dependencies
+      run : |
+        cd ${{github.workspace}}/testscripts
+        chmod +x install_dependencies.sh
+        ./install_dependencies.sh
+        
+    # clone and install bear
+    # Needed for generating compile_commands.json    
+    - name: Clone Bear
+      uses: actions/checkout@v2
+      with:
+        repository: rizsotto/Bear
+        path: depsfolder/bear
+    - name: Install Bear
+      run: |
+        cd ${{github.workspace}}/depsfolder/bear
+        cmake .
+        make all
+        sudo make install
 
+    # clone Checked C headers
+    - name: Clone Checked C headers
+      uses: actions/checkout@v2
+      with:
+        repository: microsoft/checkedc
+        path: llvm/projects/checkedc-wrapper/checkedc
+      
     # Runs a single command using the runners shell
-    - name: Build Project
+    - name: Build CConv and clang
       uses: lukka/run-cmake@v2
       with:
         cmakeListsOrSettingsJson: CMakeListsTxtAdvanced
         cmakeListsTxtPath: '${{github.workspace}}/mainsource/CMakeLists.txt'
         buildDirectory: '${{runner.workspace}}/b/ninja'
         cmakeAppendedArgs: -G Ninja
+    
+    - name: Build vsftpd
+      run: |
+        mkdir ${{runner.workspace}}/vsftpd_testing
+        wget https://security.appspot.com/downloads/vsftpd-3.0.3.tar.gz
+        tar -xvzf vsftpd-3.0.3.tar.gz
+        cd vsftpd-3.0.3
+        bear make
+        ls compile_commands.json
 
     # Runs a set of commands using the runners shell
     - name: Run a multi-line script
