@@ -41,7 +41,7 @@ jobs:
       run: |
         mkdir -p ${{runner.workspace}}/depsfolder/bear
         cd ${{runner.workspace}}/depsfolder/bear
-        cmake .
+        cmake ${{github.workspace}}/depsfolder/bear
         make all
         sudo make install
 
