@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="24c1f51c-9302-4868-ab3a-58c0e6d794cf" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../test/AST/ast-dump-attr.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../test/AST/ast-dump-attr.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../test/AST/ast-dump-attr.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../../test/AST/ast-dump-attr.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../test/AST/ast-dump-c-attr.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../../test/AST/ast-dump-c-attr.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../test/AST/ast-dump-decl.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../test/AST/ast-dump-decl.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../test/AST/ast-dump-expr-json.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../../test/AST/ast-dump-expr-json.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../test/AST/ast-dump-invalid.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../test/AST/ast-dump-invalid.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../test/AST/ast-dump-stmt.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../../test/AST/ast-dump-stmt.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../test/AST/float16.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../test/AST/float16.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../test/AST/objc-default-ctor-init.mm" beforeDir="false" afterPath="$PROJECT_DIR$/../../../test/AST/objc-default-ctor-init.mm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../test/AST/sourceranges.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../test/AST/sourceranges.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../test/CXX/dcl.decl/dcl.init/dcl.init.ref/p5-examples.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../test/CXX/dcl.decl/dcl.init/dcl.init.ref/p5-examples.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../test/CXX/expr/expr.prim/expr.prim.lambda/p15-star-this-capture.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../test/CXX/expr/expr.prim/expr.prim.lambda/p15-star-this-capture.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../test/CXX/lex/lex.literal/lex.string/p4.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../test/CXX/lex/lex.literal/lex.string/p4.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../test/CodeGenCXX/attr-x86-no_caller_saved_registers.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../test/CodeGenCXX/attr-x86-no_caller_saved_registers.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../test/FixIt/fixit-newline-style.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../../test/FixIt/fixit-newline-style.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../test/Frontend/system-header-line-directive-ms-lineendings.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../../test/Frontend/system-header-line-directive-ms-lineendings.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../test/Parser/objc-attr.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../../test/Parser/objc-attr.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../test/Preprocessor/macro_vaopt_check.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../test/Preprocessor/macro_vaopt_check.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../test/Preprocessor/macro_vaopt_expand.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../test/Preprocessor/macro_vaopt_expand.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../test/Preprocessor/macro_vaopt_p1042r1.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../test/Preprocessor/macro_vaopt_p1042r1.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../test/SemaCXX/attr-gnu.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../test/SemaCXX/attr-gnu.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../test/SemaCXX/attr-non-x86-no_caller_saved_registers.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../test/SemaCXX/attr-non-x86-no_caller_saved_registers.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../test/SemaCXX/attr-x86-no_caller_saved_registers.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../test/SemaCXX/attr-x86-no_caller_saved_registers.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../test/SemaCXX/compound-literal.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../test/SemaCXX/compound-literal.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../test/SemaCXX/warn-redundant-move.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../test/SemaCXX/warn-redundant-move.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../test/SemaCXX/warn-shadow.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../test/SemaCXX/warn-shadow.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../test/SemaObjCXX/block-cleanup.mm" beforeDir="false" afterPath="$PROJECT_DIR$/../../../test/SemaObjCXX/block-cleanup.mm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../test/SemaTemplate/default-expr-arguments-3.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../test/SemaTemplate/default-expr-arguments-3.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cc_conv/convert_all.sh" beforeDir="false" afterPath="$PROJECT_DIR$/cc_conv/convert_all.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cc_conv/convert_individual.sh" beforeDir="false" afterPath="$PROJECT_DIR$/cc_conv/convert_individual.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../clang-format-vs/ClangFormat.sln" beforeDir="false" afterPath="$PROJECT_DIR$/../../clang-format-vs/ClangFormat.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../clang-format-vs/ClangFormat/ClangFormat.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../../clang-format-vs/ClangFormat/ClangFormat.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../clang-format-vs/ClangFormat/ClangFormat.vsct" beforeDir="false" afterPath="$PROJECT_DIR$/../../clang-format-vs/ClangFormat/ClangFormat.vsct" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../clang-format-vs/ClangFormat/GlobalSuppressions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../clang-format-vs/ClangFormat/GlobalSuppressions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../clang-format-vs/ClangFormat/Guids.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../clang-format-vs/ClangFormat/Guids.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../clang-format-vs/ClangFormat/PkgCmdID.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../clang-format-vs/ClangFormat/PkgCmdID.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../clang-format-vs/ClangFormat/Properties/AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../clang-format-vs/ClangFormat/Properties/AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../clang-format-vs/ClangFormat/Resources.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../clang-format-vs/ClangFormat/Resources.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../clang-format-vs/ClangFormat/Resources.resx" beforeDir="false" afterPath="$PROJECT_DIR$/../../clang-format-vs/ClangFormat/Resources.resx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../clang-format-vs/ClangFormat/VSPackage.resx" beforeDir="false" afterPath="$PROJECT_DIR$/../../clang-format-vs/ClangFormat/VSPackage.resx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../clang-format-vs/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../clang-format-vs/README.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../clang-format-vs/source.extension.vsixmanifest.in" beforeDir="false" afterPath="$PROJECT_DIR$/../../clang-format-vs/source.extension.vsixmanifest.in" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scan-build/bin/scan-build.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../../scan-build/bin/scan-build.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scan-build/libexec/c++-analyzer.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../../scan-build/libexec/c++-analyzer.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scan-build/libexec/ccc-analyzer.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../../scan-build/libexec/ccc-analyzer.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../utils/ClangVisualizers/clang.natvis" beforeDir="false" afterPath="$PROJECT_DIR$/../../../utils/ClangVisualizers/clang.natvis" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../www/analyzer/images/analyzer_html.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../../www/analyzer/images/analyzer_html.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../www/analyzer/images/analyzer_xcode.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../../www/analyzer/images/analyzer_xcode.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../www/analyzer/images/example_attribute_nonnull.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../../www/analyzer/images/example_attribute_nonnull.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../www/analyzer/images/example_cf_returns_retained.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../../www/analyzer/images/example_cf_returns_retained.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../www/analyzer/images/example_custom_assert.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../../www/analyzer/images/example_custom_assert.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../www/analyzer/images/example_ns_returns_retained.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../../www/analyzer/images/example_ns_returns_retained.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../www/analyzer/images/example_null_pointer.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../../www/analyzer/images/example_null_pointer.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../www/analyzer/images/example_use_assert.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../../www/analyzer/images/example_use_assert.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../www/analyzer/images/scan_build_cmd.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../../www/analyzer/images/scan_build_cmd.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../www/carbon-compile.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../../www/carbon-compile.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../www/cxx_dr_status.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../www/cxx_dr_status.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../www/demo/cathead.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../../www/demo/cathead.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../www/feature-compile1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../../www/feature-compile1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../www/feature-compile2.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../../www/feature-compile2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../www/feature-memory1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../../www/feature-memory1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../llvm/test/tools/llvm-objcopy/ELF/dynrelocsec-remove-shinfo-reference.test" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../llvm/test/tools/llvm-objcopy/ELF/dynrelocsec-remove-shinfo-reference.test" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../llvm/test/tools/llvm-objcopy/ELF/dynrelocsec-remove-shlink-reference.test" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../llvm/test/tools/llvm-objcopy/ELF/dynrelocsec-remove-shlink-reference.test" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../llvm/test/tools/llvm-pdbutil/Inputs/ClassLayoutTest.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../llvm/test/tools/llvm-pdbutil/Inputs/ClassLayoutTest.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../llvm/test/tools/llvm-pdbutil/Inputs/ComplexPaddingTest.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../llvm/test/tools/llvm-pdbutil/Inputs/ComplexPaddingTest.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../llvm/test/tools/llvm-pdbutil/Inputs/FPOTest.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../llvm/test/tools/llvm-pdbutil/Inputs/FPOTest.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../llvm/test/tools/llvm-pdbutil/Inputs/FilterTest.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../llvm/test/tools/llvm-pdbutil/Inputs/FilterTest.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../llvm/test/tools/llvm-pdbutil/Inputs/InjectedSource.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../llvm/test/tools/llvm-pdbutil/Inputs/InjectedSource.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../llvm/test/tools/llvm-pdbutil/Inputs/LoadAddressTest.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../llvm/test/tools/llvm-pdbutil/Inputs/LoadAddressTest.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../llvm/test/tools/llvm-pdbutil/Inputs/PrettyFuncDumperTest.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../llvm/test/tools/llvm-pdbutil/Inputs/PrettyFuncDumperTest.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../llvm/test/tools/llvm-pdbutil/Inputs/SimplePaddingTest.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../llvm/test/tools/llvm-pdbutil/Inputs/SimplePaddingTest.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../llvm/test/tools/llvm-pdbutil/Inputs/Stripped.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../llvm/test/tools/llvm-pdbutil/Inputs/Stripped.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../llvm/test/tools/llvm-pdbutil/Inputs/TypeQualifiersTest.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../llvm/test/tools/llvm-pdbutil/Inputs/TypeQualifiersTest.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../llvm/test/tools/llvm-pdbutil/Inputs/TypeServerTest.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../llvm/test/tools/llvm-pdbutil/Inputs/TypeServerTest.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../llvm/test/tools/llvm-pdbutil/Inputs/TypeServerTest.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../llvm/test/tools/llvm-pdbutil/Inputs/TypeServerTest.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../llvm/test/tools/llvm-pdbutil/Inputs/UsingNamespaceTest.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../llvm/test/tools/llvm-pdbutil/Inputs/UsingNamespaceTest.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../llvm/test/tools/llvm-pdbutil/Inputs/dotnet_contents_compressed.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../llvm/test/tools/llvm-pdbutil/Inputs/dotnet_contents_compressed.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../llvm/test/tools/llvm-pdbutil/Inputs/dotnet_contents_uncompressed.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../llvm/test/tools/llvm-pdbutil/Inputs/dotnet_contents_uncompressed.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../llvm/test/tools/llvm-pdbutil/Inputs/dotnet_hashonly.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../llvm/test/tools/llvm-pdbutil/Inputs/dotnet_hashonly.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../llvm/test/tools/llvm-pdbutil/complex-padding-graphical.test" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../llvm/test/tools/llvm-pdbutil/complex-padding-graphical.test" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../llvm/tools/msbuild/LLVM.Cpp.Common.props" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../llvm/tools/msbuild/LLVM.Cpp.Common.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../llvm/tools/msbuild/LLVM.Cpp.Common.targets" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../llvm/tools/msbuild/LLVM.Cpp.Common.targets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../llvm/tools/msbuild/llvm-general.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../llvm/tools/msbuild/llvm-general.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../llvm/tools/msbuild/source.extension.vsixmanifest" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../llvm/tools/msbuild/source.extension.vsixmanifest" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../llvm/utils/LLVMVisualizers/llvm.natvis" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../llvm/utils/LLVMVisualizers/llvm.natvis" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="ProjectId" id="1f5lhd4ofhWkBHD3ETHoK0kcG73" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="24c1f51c-9302-4868-ab3a-58c0e6d794cf" name="Default Changelist" comment="" />
+      <created>1595515954713</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1595515954713</updated>
+      <workItem from="1595515956463" duration="5172000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+</project>
