@@ -70,6 +70,7 @@ jobs:
     - name: Build vsftpd
       run: |
         mkdir ${{runner.workspace}}/${{env.vsftpddir}}
+        cd ${{runner.workspace}}/${{env.vsftpddir}}
         wget ${{env.vsftpdurl}}
         tar -xvzf vsftpd-3.0.3.tar.gz
         cd vsftpd-3.0.3
