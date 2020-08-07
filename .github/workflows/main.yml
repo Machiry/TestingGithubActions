@@ -14,7 +14,6 @@ jobs:
       builddir: "b/ninja"
       vsftpddir: "vsftpd_testing"
       vsftpdurl: "https://security.appspot.com/downloads/vsftpd-3.0.3.tar.gz"
-      cconvtool: ${{runner.workspace}}/b/ninja/bin/cconv-standalone
     
     # The type of OS that the job will run on
     runs-on: ubuntu-latest
@@ -32,7 +31,6 @@ jobs:
     # Install all the required dependencies  
     - name: Install dependencies
       run : |
-        echo ${{env.cconvtool}}
         sudo apt-get update
         sudo apt-get install libboost-all-dev git python cmake build-essential wget tar ninja-build liblzma-dev libreadline-dev
         
@@ -85,7 +83,7 @@ jobs:
     - name: Testing vsftpd
       run: |
         cd ${{github.workspace}}/depsfolder/checkedc-clang/clang/tools/cconv-standalone/utils/cc_conv
-        python convert_project.py --includeDir ${{github.workspace}}/depsfolder/checkedc-clang/llvm/projects/checkedc-wrapper/checkedc/include -p ${{env.cconvtool}} -pr ${{runner.workspace}}/${{env.vsftpddir}}/vsftpd-3.0.3
+        python convert_project.py --includeDir ${{github.workspace}}/depsfolder/checkedc-clang/llvm/projects/checkedc-wrapper/checkedc/include -p ${{runner.workspace}}/${{env.builddir}}/bin/cconv-standalone -pr ${{runner.workspace}}/${{env.vsftpddir}}/vsftpd-3.0.3
     
     - name: Clone Checkedc-eval
       uses: actions/checkout@v2
@@ -105,7 +103,7 @@ jobs:
     - name: Testing libarchive
       run: |
         cd ${{github.workspace}}/depsfolder/checkedc-clang/clang/tools/cconv-standalone/utils/cc_conv
-        python convert_project.py --skip '/.*/test/.*' --skip '/.*/test_utils/.*' --includeDir ${{github.workspace}}/depsfolder/checkedc-clang/llvm/projects/checkedc-wrapper/checkedc/include -p ${{env.cconvtool}} -pr ${{runner.workspace}}/depsfolder/libarchive.obj
+        python convert_project.py --skip '/.*/test/.*' --skip '/.*/test_utils/.*' --includeDir ${{github.workspace}}/depsfolder/checkedc-clang/llvm/projects/checkedc-wrapper/checkedc/include -p ${{runner.workspace}}/${{env.builddir}}/bin/cconv-standalone -pr ${{runner.workspace}}/depsfolder/libarchive.obj
         
     - name: Build zlib
       run: |
@@ -117,7 +115,7 @@ jobs:
     - name: Testing zlib
       run: |
         cd ${{github.workspace}}/depsfolder/checkedc-clang/clang/tools/cconv-standalone/utils/cc_conv
-        python convert_project.py --skip '/.*/test/.*' --includeDir ${{github.workspace}}/depsfolder/checkedc-clang/llvm/projects/checkedc-wrapper/checkedc/include -p ${{env.cconvtool}} -pr ${{runner.workspace}}/depsfolder/zlib.obj
+        python convert_project.py --skip '/.*/test/.*' --includeDir ${{github.workspace}}/depsfolder/checkedc-clang/llvm/projects/checkedc-wrapper/checkedc/include -p ${{runner.workspace}}/${{env.builddir}}/bin/cconv-standalone -pr ${{runner.workspace}}/depsfolder/zlib.obj
       
     - name: Build libtiff
       run: |
@@ -129,7 +127,7 @@ jobs:
     - name: Testing libtiff
       run: |
         cd ${{github.workspace}}/depsfolder/checkedc-clang/clang/tools/cconv-standalone/utils/cc_conv
-        python convert_project.py --skip '/.*/tif_stream.cxx' --includeDir ${{github.workspace}}/depsfolder/checkedc-clang/llvm/projects/checkedc-wrapper/checkedc/include -p ${{env.cconvtool}} -pr ${{runner.workspace}}/depsfolder/libtiff.obj
+        python convert_project.py --skip '/.*/tif_stream.cxx' --includeDir ${{github.workspace}}/depsfolder/checkedc-clang/llvm/projects/checkedc-wrapper/checkedc/include -p ${{runner.workspace}}/${{env.builddir}}/bin/cconv-standalone -pr ${{runner.workspace}}/depsfolder/libtiff.obj
     
     - name: Build lua
       run: |
@@ -139,5 +137,4 @@ jobs:
     - name: Testing lua
       run: |
         cd ${{github.workspace}}/depsfolder/checkedc-clang/clang/tools/cconv-standalone/utils/cc_conv
-        python convert_project.py --includeDir ${{github.workspace}}/depsfolder/checkedc-clang/llvm/projects/checkedc-wrapper/checkedc/include -p ${{env.cconvtool}} -pr ${{github.workspace}}/depsfolder/checkedc-eval/lua
-
+        python convert_project.py --includeDir ${{github.workspace}}/depsfolder/checkedc-clang/llvm/projects/checkedc-wrapper/checkedc/include -p ${{runner.workspace}}/${{env.builddir}}/bin/cconv-standalone -pr ${{github.workspace}}/depsfolder/checkedc-eval/lua
