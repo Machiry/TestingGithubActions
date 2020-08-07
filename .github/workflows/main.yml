@@ -14,8 +14,8 @@ jobs:
       builddir: "b/ninja"
       vsftpddir: "vsftpd_testing"
       vsftpdurl: "https://security.appspot.com/downloads/vsftpd-3.0.3.tar.gz"
-      #cconvtool: ${{runner.workspace}}/${{env.builddir}}/bin/cconv-standalone
-      cconvtool: "/bin/true"
+      cconvtool: ${{runner.workspace}}/b/ninja/bin/cconv-standalone
+    
     # The type of OS that the job will run on
     runs-on: ubuntu-latest
 
@@ -32,6 +32,7 @@ jobs:
     # Install all the required dependencies  
     - name: Install dependencies
       run : |
+        echo ${{env.cconvtool}}
         sudo apt-get update
         sudo apt-get install libboost-all-dev git python cmake build-essential wget tar ninja-build liblzma-dev libreadline-dev
         
@@ -67,8 +68,8 @@ jobs:
         mkdir -p ${{runner.workspace}}/${{env.builddir}}
         cd ${{runner.workspace}}/${{env.builddir}}
         cmake -G Ninja -DLLVM_TARGETS_TO_BUILD=X86 -DLLVM_ENABLE_RTTI=ON -DCMAKE_BUILD_TYPE="MinSizeRel" -DLLVM_ENABLE_PROJECTS="clang;clang-tools-extra" ${{github.workspace}}/depsfolder/checkedc-clang/llvm
-        # ninja cconv-standalone
-        # ninja clang
+        ninja cconv-standalone
+        ninja clang
 
     - name: Build vsftpd
       run: |
