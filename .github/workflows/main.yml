@@ -91,6 +91,7 @@ jobs:
       with:
         repository: plum-umd/checkedc-eval
         path: depsfolder/checkedc-eval
+        token: ${{secrets.MACHIRY_KEY_PRIVATE_ACCESS}}
         submodules: true
     
     - name: Build libarchive
