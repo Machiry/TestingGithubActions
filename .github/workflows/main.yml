@@ -93,6 +93,38 @@ jobs:
         token: ${{secrets.MACHIRY_KEY_PRIVATE_ACCESS}}
         submodules: true
     
+    - name: Build PtrDist
+      run: |
+        cd ${{github.workspace}}/depsfolder/checkedc-eval
+        tar -xvzf ptrdist-1.1.tar.gz
+        cd ptrdist-1.1
+        ./RUNGCC.sh
+    
+    - name: Test anagram (PtrDist)
+      run: |
+        cd ${{github.workspace}}/depsfolder/checkedc-clang/clang/tools/cconv-standalone/utils/cc_conv
+        python convert_project.py --includeDir ${{github.workspace}}/depsfolder/checkedc-clang/llvm/projects/checkedc-wrapper/checkedc/include -p ${{runner.workspace}}/${{env.builddir}}/bin/cconv-standalone -pr ${{github.workspace}}/depsfolder/checkedc-eval/ptrdist-1.1/anagram
+        
+    - name: Test bc (PtrDist)
+      run: |
+        cd ${{github.workspace}}/depsfolder/checkedc-clang/clang/tools/cconv-standalone/utils/cc_conv
+        python convert_project.py --includeDir ${{github.workspace}}/depsfolder/checkedc-clang/llvm/projects/checkedc-wrapper/checkedc/include -p ${{runner.workspace}}/${{env.builddir}}/bin/cconv-standalone -pr ${{github.workspace}}/depsfolder/checkedc-eval/ptrdist-1.1/bc
+    
+    - name: Test ft (PtrDist)
+      run: |
+        cd ${{github.workspace}}/depsfolder/checkedc-clang/clang/tools/cconv-standalone/utils/cc_conv
+        python convert_project.py --includeDir ${{github.workspace}}/depsfolder/checkedc-clang/llvm/projects/checkedc-wrapper/checkedc/include -p ${{runner.workspace}}/${{env.builddir}}/bin/cconv-standalone -pr ${{github.workspace}}/depsfolder/checkedc-eval/ptrdist-1.1/ft
+    
+    - name: Test ks (PtrDist)
+      run: |
+        cd ${{github.workspace}}/depsfolder/checkedc-clang/clang/tools/cconv-standalone/utils/cc_conv
+        python convert_project.py --includeDir ${{github.workspace}}/depsfolder/checkedc-clang/llvm/projects/checkedc-wrapper/checkedc/include -p ${{runner.workspace}}/${{env.builddir}}/bin/cconv-standalone -pr ${{github.workspace}}/depsfolder/checkedc-eval/ptrdist-1.1/ks
+    
+    - name: Test yacr2 (PtrDist)
+      run: |
+        cd ${{github.workspace}}/depsfolder/checkedc-clang/clang/tools/cconv-standalone/utils/cc_conv
+        python convert_project.py --includeDir ${{github.workspace}}/depsfolder/checkedc-clang/llvm/projects/checkedc-wrapper/checkedc/include -p ${{runner.workspace}}/${{env.builddir}}/bin/cconv-standalone -pr ${{github.workspace}}/depsfolder/checkedc-eval/ptrdist-1.1/yacr2
+    
     - name: Build libarchive
       run: |
         mkdir -p ${{runner.workspace}}/depsfolder/libarchive.obj
