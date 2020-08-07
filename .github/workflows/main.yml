@@ -33,7 +33,7 @@ jobs:
     - name: Install dependencies
       run : |
         sudo apt-get update
-        sudo apt-get install libboost-all-dev git python cmake build-essential wget tar ninja-build
+        sudo apt-get install libboost-all-dev git python cmake build-essential wget tar ninja-build liblzma-dev libreadline-dev
         
     # clone and install bear
     # Needed for generating compile_commands.json    
@@ -98,7 +98,7 @@ jobs:
       run: |
         mkdir -p ${{runner.workspace}}/depsfolder/libarchive.obj
         cd ${{runner.workspace}}/depsfolder/libarchive.obj
-        cmake ${{github.workspace}}/depsfolder/checkedc-eval/libarchive
+        cmake -DCMAKE_C_FLAGS="-w" ${{github.workspace}}/depsfolder/checkedc-eval/libarchive
         bear make
     
     - name: Testing libarchive
@@ -110,7 +110,7 @@ jobs:
       run: |
         mkdir -p ${{runner.workspace}}/depsfolder/zlib.obj
         cd ${{runner.workspace}}/depsfolder/zlib.obj
-        cmake ${{github.workspace}}/depsfolder/checkedc-eval/zlib
+        cmake -DCMAKE_C_FLAGS="-w" ${{github.workspace}}/depsfolder/checkedc-eval/zlib
         bear make
     
     - name: Testing zlib
@@ -122,7 +122,7 @@ jobs:
       run: |
         mkdir -p ${{runner.workspace}}/depsfolder/libtiff.obj
         cd ${{runner.workspace}}/depsfolder/libtiff.obj
-        cmake ${{github.workspace}}/depsfolder/checkedc-eval/libtiff
+        cmake -DCMAKE_C_FLAGS="-w" ${{github.workspace}}/depsfolder/checkedc-eval/libtiff
         bear make
     
     - name: Testing libtiff
