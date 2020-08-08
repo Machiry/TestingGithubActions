@@ -6,7 +6,7 @@ name: Nightly Sanity Tests
 # events but only for the master branch
 on: push
 
-  
+
 env:
   builddir: "b/ninja"
   vsftpddir: "vsftpd_testing"
@@ -81,7 +81,7 @@ jobs:
         with:
           name: cconvscripts
           path: ${{github.workspace}}/depsfolder/checkedc-clang/clang/tools/cconv-standalone/utils
-          
+
   testvsftpd:
     name: Build and test vsftpd
     needs: build
@@ -121,6 +121,13 @@ jobs:
           name: cconvscripts
           path: ${{github.workspace}}/depsfolder/checkedc-clang/clang/tools/cconv-standalone/utils
 
+      # clone Checked C headers
+      - name: Clone Checked C headers
+        uses: actions/checkout@v2
+        with:
+          repository: microsoft/checkedc
+          path: ${{github.workspace}}/depsfolder/checkedc-clang/llvm/projects/checkedc-wrapper/checkedc
+
       - name: Build vsftpd
         run: |
           mkdir ${{runner.workspace}}/${{env.vsftpddir}}
@@ -131,7 +138,7 @@ jobs:
           bear make
           ls compile_commands.json
           pwd
-
+          
       - name: Testing vsftpd
         run: |
           cd ${{github.workspace}}/depsfolder/checkedc-clang/clang/tools/cconv-standalone/utils/cc_conv
@@ -139,7 +146,7 @@ jobs:
 
   testptrdist:
     name: Build and test ptrdist
-    
+
     needs: build
     # The type of OS that the job will run on
     runs-on: ubuntu-latest
@@ -170,7 +177,7 @@ jobs:
           path: depsfolder/checkedc-eval
           token: ${{secrets.MACHIRY_KEY_PRIVATE_ACCESS}}
           submodules: true
-          
+
       # Download the built cconv-standalone and clang
       - name: Download Build files
         uses: actions/download-artifact@v2
@@ -184,7 +191,14 @@ jobs:
         with:
           name: cconvscripts
           path: ${{github.workspace}}/depsfolder/checkedc-clang/clang/tools/cconv-standalone/utils
-            
+
+      # clone Checked C headers
+      - name: Clone Checked C headers
+        uses: actions/checkout@v2
+        with:
+          repository: microsoft/checkedc
+          path: ${{github.workspace}}/depsfolder/checkedc-clang/llvm/projects/checkedc-wrapper/checkedc
+
       - name: Build PtrDist
         run: |
           cd ${{github.workspace}}/depsfolder/checkedc-eval
@@ -264,6 +278,13 @@ jobs:
           name: cconvscripts
           path: ${{github.workspace}}/depsfolder/checkedc-clang/clang/tools/cconv-standalone/utils
 
+      # clone Checked C headers
+      - name: Clone Checked C headers
+        uses: actions/checkout@v2
+        with:
+          repository: microsoft/checkedc
+          path: ${{github.workspace}}/depsfolder/checkedc-clang/llvm/projects/checkedc-wrapper/checkedc    
+
       - name: Build libarchive
         run: |
           mkdir -p ${{runner.workspace}}/depsfolder/libarchive.obj
@@ -323,6 +344,13 @@ jobs:
           name: cconvscripts
           path: ${{github.workspace}}/depsfolder/checkedc-clang/clang/tools/cconv-standalone/utils
 
+      # clone Checked C headers
+      - name: Clone Checked C headers
+        uses: actions/checkout@v2
+        with:
+          repository: microsoft/checkedc
+          path: ${{github.workspace}}/depsfolder/checkedc-clang/llvm/projects/checkedc-wrapper/checkedc
+
       - name: Build lua
         run: |
           cd ${{github.workspace}}/depsfolder/checkedc-eval/lua
@@ -335,7 +363,7 @@ jobs:
 
   buildandtestlibtiff:
     name: Build and test libtiff
-      
+
     needs: build
     # The type of OS that the job will run on
     runs-on: ubuntu-latest
@@ -380,6 +408,13 @@ jobs:
         with:
           name: cconvscripts
           path: ${{github.workspace}}/depsfolder/checkedc-clang/clang/tools/cconv-standalone/utils
+
+      # clone Checked C headers
+      - name: Clone Checked C headers
+        uses: actions/checkout@v2
+        with:
+          repository: microsoft/checkedc
+          path: ${{github.workspace}}/depsfolder/checkedc-clang/llvm/projects/checkedc-wrapper/checkedc
 
       - name: Build libtiff
         run: |
@@ -439,6 +474,13 @@ jobs:
         with:
           name: cconvscripts
           path: ${{github.workspace}}/depsfolder/checkedc-clang/clang/tools/cconv-standalone/utils
+
+      # clone Checked C headers
+      - name: Clone Checked C headers
+        uses: actions/checkout@v2
+        with:
+          repository: microsoft/checkedc
+          path: ${{github.workspace}}/depsfolder/checkedc-clang/llvm/projects/checkedc-wrapper/checkedc
 
       - name: Build zlib
         run: |
