@@ -141,6 +141,8 @@ jobs:
           
       - name: Testing vsftpd
         run: |
+          chmod -R 777 ${{github.workspace}}/depsfolder
+          chmod -R 777 ${{runner.workspace}}/${{env.builddir}}
           cd ${{github.workspace}}/depsfolder/checkedc-clang/clang/tools/cconv-standalone/utils/cc_conv
           python convert_project.py --includeDir ${{github.workspace}}/depsfolder/checkedc-clang/llvm/projects/checkedc-wrapper/checkedc/include -p ${{runner.workspace}}/${{env.builddir}}/bin/cconv-standalone -pr ${{runner.workspace}}/${{env.vsftpddir}}/vsftpd-3.0.3
 
@@ -208,6 +210,8 @@ jobs:
 
       - name: Test anagram (PtrDist)
         run: |
+          chmod -R 777 ${{github.workspace}}/depsfolder
+          chmod -R 777 ${{runner.workspace}}/${{env.builddir}}
           cd ${{github.workspace}}/depsfolder/checkedc-clang/clang/tools/cconv-standalone/utils/cc_conv
           python convert_project.py --includeDir ${{github.workspace}}/depsfolder/checkedc-clang/llvm/projects/checkedc-wrapper/checkedc/include -p ${{runner.workspace}}/${{env.builddir}}/bin/cconv-standalone -pr ${{github.workspace}}/depsfolder/checkedc-eval/ptrdist-1.1/anagram
 
@@ -294,6 +298,8 @@ jobs:
 
       - name: Testing libarchive
         run: |
+          chmod -R 777 ${{github.workspace}}/depsfolder
+          chmod -R 777 ${{runner.workspace}}/${{env.builddir}}
           cd ${{github.workspace}}/depsfolder/checkedc-clang/clang/tools/cconv-standalone/utils/cc_conv
           python convert_project.py --skip '/.*/test/.*' --skip '/.*/test_utils/.*' --includeDir ${{github.workspace}}/depsfolder/checkedc-clang/llvm/projects/checkedc-wrapper/checkedc/include -p ${{runner.workspace}}/${{env.builddir}}/bin/cconv-standalone -pr ${{runner.workspace}}/depsfolder/libarchive.obj
 
@@ -358,6 +364,8 @@ jobs:
 
       - name: Testing lua
         run: |
+          chmod -R 777 ${{github.workspace}}/depsfolder
+          chmod -R 777 ${{runner.workspace}}/${{env.builddir}}
           cd ${{github.workspace}}/depsfolder/checkedc-clang/clang/tools/cconv-standalone/utils/cc_conv
           python convert_project.py --includeDir ${{github.workspace}}/depsfolder/checkedc-clang/llvm/projects/checkedc-wrapper/checkedc/include -p ${{runner.workspace}}/${{env.builddir}}/bin/cconv-standalone -pr ${{github.workspace}}/depsfolder/checkedc-eval/lua
 
@@ -425,6 +433,8 @@ jobs:
 
       - name: Testing libtiff
         run: |
+          chmod -R 777 ${{github.workspace}}/depsfolder
+          chmod -R 777 ${{runner.workspace}}/${{env.builddir}}
           cd ${{github.workspace}}/depsfolder/checkedc-clang/clang/tools/cconv-standalone/utils/cc_conv
           python convert_project.py --skip '/.*/tif_stream.cxx' --includeDir ${{github.workspace}}/depsfolder/checkedc-clang/llvm/projects/checkedc-wrapper/checkedc/include -p ${{runner.workspace}}/${{env.builddir}}/bin/cconv-standalone -pr ${{runner.workspace}}/depsfolder/libtiff.obj
 
@@ -491,5 +501,7 @@ jobs:
 
       - name: Testing zlib
         run: |
+          chmod -R 777 ${{github.workspace}}/depsfolder
+          chmod -R 777 ${{runner.workspace}}/${{env.builddir}}
           cd ${{github.workspace}}/depsfolder/checkedc-clang/clang/tools/cconv-standalone/utils/cc_conv
           python convert_project.py --skip '/.*/test/.*' --includeDir ${{github.workspace}}/depsfolder/checkedc-clang/llvm/projects/checkedc-wrapper/checkedc/include -p ${{runner.workspace}}/${{env.builddir}}/bin/cconv-standalone -pr ${{runner.workspace}}/depsfolder/zlib.obj
