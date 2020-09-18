@@ -25,7 +25,7 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install gcc-8 g++-8 git python cmake build-essential wget tar ninja-build liblzma-dev libreadline-dev
+          sudo apt-get install gcc-8 g++-8 git python cmake wget tar ninja-build liblzma-dev libreadline-dev
       # clone and install bear
       # Needed for generating compile_commands.json
       - name: Clone Bear
