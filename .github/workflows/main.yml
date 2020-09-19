@@ -33,6 +33,7 @@ jobs:
         with:
           repository: rizsotto/Bear
           path: depsfolder/bear
+      - run: cd ${{github.workspace}}/depsfolder/bear && git checkout 75ff7f561652509ec9b34095881fdb6c4a56c9e0    
       - name: Install Bear
         run: |
           mkdir -p ${{runner.workspace}}/depsfolder/bear
