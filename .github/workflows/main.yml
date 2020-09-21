@@ -88,13 +88,6 @@ jobs:
         with:
           name: cconvscripts
           path: ${{github.workspace}}/depsfolder/checkedc-clang/clang/tools/cconv-standalone/utils
-      
-      # Upload Repo files
-      - name: Upload Repo files
-        uses: actions/upload-artifact@v2
-        with:
-          name: cconvrepo
-          path: ${{github.workspace}}/depsfolder/checkedc-clang
 
 
   unittests:
@@ -114,12 +107,20 @@ jobs:
           name: cconvbuild
           path: ${{runner.workspace}}/${{env.builddir}}
           
-      # Download test files
-      - name: Download Repo files
-        uses: actions/download-artifact@v2
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: Checkout our repository
+        uses: actions/checkout@v2
         with:
-          name: cconvrepo
-          path: ${{github.workspace}}/depsfolder/checkedc-clang
+          repository: plum-umd/checkedc-clang
+          ref: BigRefactor
+          path: depsfolder/checkedc-clang
+
+      # clone Checked C headers
+      - name: Clone Checked C headers
+        uses: actions/checkout@v2
+        with:
+          repository: microsoft/checkedc
+          path: ${{github.workspace}}/depsfolder/checkedc-clang/llvm/projects/checkedc-wrapper/checkedc
 
       # Run units tests
       - name: Run Unit Tests
