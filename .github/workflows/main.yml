@@ -89,12 +89,12 @@ jobs:
           name: cconvscripts
           path: ${{github.workspace}}/depsfolder/checkedc-clang/clang/tools/cconv-standalone/utils
       
-      # Upload Test files
-      - name: Upload Test files
+      # Upload Repo files
+      - name: Upload Repo files
         uses: actions/upload-artifact@v2
         with:
-          name: cconvtests
-          path: ${{github.workspace}}/depsfolder/checkedc-clang/clang/test
+          name: cconvrepo
+          path: ${{github.workspace}}/depsfolder/checkedc-clang
 
 
   unittests:
@@ -115,17 +115,11 @@ jobs:
           path: ${{runner.workspace}}/${{env.builddir}}
           
       # Download test files
-      - name: Download test files
+      - name: Download Repo files
         uses: actions/download-artifact@v2
         with:
-          name: cconvtests
-          path: ${{github.workspace}}/depsfolder/checkedc-clang/clang/test
-
-      - name: Clone checked c headers
-        uses: actions/checkout@v2
-        with:
-          repository: microsoft/checkedc
-          path: ${{github.workspace}}/depsfolder/checkedc-clang/llvm/projects/checkedc-wrapper/checkedc
+          name: cconvrepo
+          path: ${{github.workspace}}/depsfolder/checkedc-clang
 
       # Run units tests
       - name: Run Unit Tests
